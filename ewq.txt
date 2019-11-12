@@ -1,0 +1,5 @@
+[0m[01;34mbin[0m/
+ewq.txt
+HelloWorld.sln
+[01;34mProject1[0m/
+README.md

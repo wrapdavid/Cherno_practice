@@ -31,9 +31,9 @@ int main() {
 	for (Vertex v : vertices) {
 		std::cout << v << std::endl;
 	}
-	vertices.erase(vertices.begin()+0);
+	/*vertices.erase(vertices.begin()+0);
 	for (Vertex v : vertices) {
 		std::cout << v << std::endl;
-	}
+	}*/
 	std::cin.get();
 }

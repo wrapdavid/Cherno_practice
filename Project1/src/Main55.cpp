@@ -36,10 +36,10 @@ public:
 	friend std::ostream& operator<<(std::ostream& stream, const String& object);
 };
 
-std::ostream& operator<<(std::ostream& stream, const String& object) {
-	stream << object.m_buffer;
-	return stream;
-}
+//std::ostream& operator<<(std::ostream& stream, const String& object) {
+//	stream << object.m_buffer;
+//	return stream;
+//}
 
 void StringPrint(const String& string) {
 	std::cout << string << std::endl;

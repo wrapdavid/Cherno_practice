@@ -13,7 +13,7 @@ void Print(T value) {
 }
 
 int main() {
-	Print("\63");
+	Print("\x61");
 	Array<int,5> array;
 	std::cout << array.GetSize() << std::endl;
 	std::cin.get();

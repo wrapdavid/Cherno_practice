@@ -17,7 +17,9 @@ void ForEach(std::vector<int> values, void(*fuc)(int)) {
 
 int main() {
 	std::vector<int> values = { 1,2,5,3,47 };
-	ForEach(values, PrintFuction);
+	ForEach(values, [](int value) {
+		std::cout << "value: " << value << std::endl;
+		});
 
 
 

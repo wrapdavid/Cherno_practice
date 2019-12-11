@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main71.cpp">
+    <ClCompile Include="src\Main72.cpp">
       <Filter>資源檔\來源檔案</Filter>
     </ClCompile>
   </ItemGroup>

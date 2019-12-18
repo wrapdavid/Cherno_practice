@@ -2,7 +2,7 @@
 #include<string>
 #include<chrono>
 struct Timer {
-	std::chrono::steady_clock::time_point start, end;
+	std::chrono::time_point<std::chrono::steady_clock> start, end;
 	std::chrono::duration<float> duration;
 	Timer() {
 		start = std::chrono::high_resolution_clock::now();
@@ -16,7 +16,6 @@ struct Timer {
 };
 int main() {
 	{
-		Timer time;
 	int** array = new int* [5];
 	for (int y = 0; y < 5; y++) {
 
@@ -31,7 +30,7 @@ int main() {
 	}
 
 	{
-		Timer time;
+	Timer time;
 	int* a2d = new int[5 * 5];
 	for (int y = 0; y < 5; y++) {
 

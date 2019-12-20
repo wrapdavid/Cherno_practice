@@ -1,36 +1,40 @@
 #include<iostream>
 #include<vector>
-
+class a {
+public:
 struct vector2 {
-	float x;
+	float x, y;
 };
 struct vector4
 {
+	union {
+		struct 
+		{
 
-	
-	float x, y, z, w;
+		float x, y, z, w;
 
-	vector2& GetA() {
-		return *(vector2*)&x;
-	}
-	vector2& GetB() {
-		return *(vector2*)&z;
-	}
+		};
+
+		struct 
+		{
+			vector2 a, b;
+		};
+	};
+};
 };
 
-void PrintFuction(const vector2& vector) {
+void PrintFuction(const a::vector2& vector) {
 	std::cout << vector.x << ", " << vector.y << std::endl;
 }
 
 int main() {
-	vector2 vect0;
-	vector4 vect = { 1,3,4,6 };
-	vect.x = 5;
-	
-	PrintFuction(vect.GetA());
-	PrintFuction(vect.GetB());
-	//std::cout << vect0.x << std::endl;
-	
+	a::vector4 vector = {2.0f, 3.0f, 4.0f, 5.0f};
+	PrintFuction(vector.a);
+	PrintFuction(vector.b);
+	vector.y = 10.0f;
+	std::cout << "======================" << std::endl;
+	PrintFuction(vector.a);
+	PrintFuction(vector.b);
 	std::cin.get();
 
 }

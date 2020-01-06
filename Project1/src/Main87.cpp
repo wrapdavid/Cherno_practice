@@ -7,8 +7,10 @@ public:
 
 class Derive : public Base {
 public:
-	Derive() { std::cout << "Derive constructor" << std::endl; }
-	~Derive() { std::cout << "Derive destructor" << std::endl; }
+	Derive() { m_array = new int[5]; std::cout << "Derive constructor" << std::endl; }
+	~Derive() { delete[] m_array; std::cout << "Derive destructor" << std::endl; }
+private:
+	int* m_array;
 };
 int main() {
 	Base* base = new Base();

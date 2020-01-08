@@ -23,7 +23,7 @@
 int main() {
 	
 	Derive* derive = new Derive();
-	Base* base = derive;
+	Base* base = derive ;
 	Derive* ac = dynamic_cast<Derive*>(base);
 	
 	std::cin.get();

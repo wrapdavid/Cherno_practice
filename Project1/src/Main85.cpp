@@ -12,6 +12,7 @@ int main() {
 	int* getposition = e.GetPosition();
 	int* position = (int*)&e;
 	int y = *(int*)((char*)&e+4);
+	//int y = *reinterpret_cast<int*>(reinterpret_cast<char*>(&e) + 4);
 	std::cout << position[0] << ", " << position[1] << std::endl;
 	std::cout << y << std::endl;
 
